@@ -1,0 +1,16 @@
+#loginredirects{
+    padding: 0;
+    margin-bottom: 1rem;
+}
+#authformcont{
+    max-width: 50vw;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 1rem;
+    margin-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: #E9ECEF;
+}
+body{
+    background-color: aliceblue;
+}

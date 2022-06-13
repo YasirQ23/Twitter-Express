@@ -1,5 +1,5 @@
 <%- include('../partials/header.ejs') %>
-<div class="container">
+<div id="authformcont" class="container">
     <h1>Login</h1>
     <form>
         <div class="form-group">
@@ -11,7 +11,7 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1">
         </div>
-        <a class="nav-link" href="/register">Don't have an account? Register here.</a>
+        <a id="loginredirects" class="nav-link" href="/register">Don't have an account? Register here.</a>
         <button type="submit" class="btn btn-primary">Log In</button>
     </form>
 </div>
