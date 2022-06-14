@@ -1,18 +1,27 @@
-const express = require('express');
-const app = express();
+const express = require('express')
+const dotenv = require('dotenv')
+const { connectDB } = require('./src/db')
 const path = require('path');
-const port = 3000;
+const { graphqlHTTP } = require('express-graphql')
+const schema = require('./src/graphql/schema')
 
-app.listen(port, () => {
-    console.log(`This app is listening on port ${port}`);
+dotenv.config()
+
+const app = express()
+
+connectDB()
+
+app.use("/graphql", graphqlHTTP({
+    schema,
+    graphiql: true
+}))
+
+app.listen(process.env.PORT, () => {
+    console.log(`Server now running on PORT ${process.env.PORT}`)
 });
 
 app.set('view engine', 'ejs');
 
-app.use((req, res, next) => {
-    console.log(`Request received at: ${Date()}`);
-    next();
-});
 
 // has to be an ojbect that your passing into one fo your render templates    
 
