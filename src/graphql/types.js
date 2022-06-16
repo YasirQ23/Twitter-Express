@@ -20,7 +20,7 @@ const PostType = new GraphQLObjectType({
     fields: () => ({
         id: { type: GraphQLID },
         body: { type: GraphQLString },
-        likes: { type: GraphQLArray },
+        likes: { type: GraphQLString },
     })
 })
 
