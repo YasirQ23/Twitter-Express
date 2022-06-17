@@ -43,4 +43,19 @@ const login = {
     }
 }
 
-module.exports = { register, login }
+const post = {
+    type: GraphQLString,
+    args: {
+        body: {
+            type: GraphQLString
+        },
+        likes: {
+            type: GraphQLString
+        },
+        userId: {
+            type: GraphQLString
+        }
+    }
+}
+
+module.exports = { register, login, post }
